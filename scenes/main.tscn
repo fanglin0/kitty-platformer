@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdkiim242of1d"]
+
+[ext_resource type="PackedScene" uid="uid://cky2lbashnylq" path="res://scenes/levels/level1_.tscn" id="1_h2jvi"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_wbmb1"]
+[ext_resource type="FontFile" uid="uid://c6e4t22xcocj0" path="res://assets/fonts/Square-Black.ttf" id="3_bcak5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w463h"]
+bg_color = Color(0.289791, 0.552106, 0.538144, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_wbmb1")
+
+[node name="LevelRoot" parent="." instance=ExtResource("1_h2jvi")]
+position = Vector2(-3, -36)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScorePanel" type="Panel" parent="HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 20.0
+offset_right = 80.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w463h")
+
+[node name="ScoreLabel" type="Label" parent="HUD/ScorePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -17.0
+offset_right = 55.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_bcak5")
+theme_override_font_sizes/font_size = 32
+text = "SCORE: 0
+"
