@@ -287,6 +287,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_656tx"]
+size = Vector2(19.046, 14.556)
 
 [node name="LevelRoot" type="Node2D"]
 
@@ -339,11 +340,13 @@ autoplay = "default"
 frame_progress = 0.0134451
 
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2(1303, 254)
+position = Vector2(1261, 226)
 scale = Vector2(2.65312, 6.58476)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(0.47702, 2.72201)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_656tx")
 
 [connection signal="body_entered" from="Exit" to="Player" method="_on_exit_body_entered"]

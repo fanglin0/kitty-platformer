@@ -1,8 +1,9 @@
 extends Area2D
+
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collected_sound: AudioStreamPlayer2D = $CollectedSound
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
-
 signal collected
 
 func _on_body_entered(_body: Node2D) -> void:
@@ -16,4 +17,4 @@ func _disable_collision() -> void:
 
 func _on_animated_sprite_2d_animation_looped() -> void:
 	if animated_sprite_2d.animation == "collected":
-		queue_free() # Replace with function body.
+		queue_free() # Re=-=--place with function body.
