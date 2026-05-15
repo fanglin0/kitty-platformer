@@ -346,7 +346,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(0.47702, 2.72201)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_656tx")
 
 [connection signal="body_entered" from="Exit" to="Player" method="_on_exit_body_entered"]

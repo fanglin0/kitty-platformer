@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce0h7co8ffhe1"]
+
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_m171l"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m171l")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.408
+anchor_top = 0.289
+anchor_right = 0.627
+anchor_bottom = 0.436
+offset_left = -0.240051
+offset_top = -0.0800018
+offset_right = -0.560059
+offset_bottom = 0.0799866
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.408
+anchor_top = 0.582
+anchor_right = 0.627
+anchor_bottom = 0.708
+offset_left = -0.240051
+offset_top = -0.0400085
+offset_right = -0.560059
+offset_bottom = 0.23999
+text = "Quit"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

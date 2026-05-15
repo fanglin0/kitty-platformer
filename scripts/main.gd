@@ -35,6 +35,7 @@ func _on_exit_body_entered(body:Node2D) -> void:
 		print(level)
 		body.can_move = false
 		score_label.text = "You Win!!!"
+		get_tree().change_scene_to_file("res://scenes/levels/level2.tscn")
 func _on_player_died(body):
 	body.die()
 	print("Player killed")
