@@ -10,15 +10,15 @@ config_version=5
 
 [application]
 
-config/name="kitty cat cat cat"
-run/main_scene="res://scenes/main.tscn"
+config/name="kitty cat cat cat (4.3)"
+run/main_scene="res://scenes/title_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_height=820
 
 [editor_plugins]
 

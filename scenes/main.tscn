@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdkiim242of1d"]
 
-[ext_resource type="PackedScene" uid="uid://cky2lbashnylq" path="res://scenes/levels/level1_.tscn" id="1_h2jvi"]
+[ext_resource type="PackedScene" uid="uid://cky2lbashnylq" path="res://scenes/levels/level1.tscn" id="1_h2jvi"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_wbmb1"]
 [ext_resource type="FontFile" uid="uid://c6e4t22xcocj0" path="res://assets/fonts/Square-Black.ttf" id="3_bcak5"]
 
@@ -53,3 +53,12 @@ theme_override_fonts/font = ExtResource("3_bcak5")
 theme_override_font_sizes/font_size = 32
 text = "SCORE: 0
 "
+
+[node name="Fade" type="ColorRect" parent="HUD"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
