@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://ct1ngvwqdrc7y"]
+[gd_scene load_steps=21 format=4 uid="uid://ct1ngvwqdrc7y"]
 
 [ext_resource type="Texture2D" uid="uid://bowd1x1fsmb2w" path="res://assets/Background/Gray.png" id="1_ok6xr"]
 [ext_resource type="Texture2D" uid="uid://6nja5t4jumuv" path="res://assets/images/Tilemap/Terrain (16x16).png" id="2_dj4wq"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://csvw36nou4elq" path="res://scenes/snail.tscn" id="4_b0vvs"]
 [ext_resource type="PackedScene" uid="uid://jfydrnnytoos" path="res://scenes/apple.tscn" id="5_oyk6k"]
 [ext_resource type="Texture2D" uid="uid://1hdp4uhl2u8r" path="res://assets/images/Tilemap/Checkpoint (Flag Idle)(64x64).png" id="6_gycjm"]
-[ext_resource type="Texture2D" uid="uid://qngkmtkbtmbp" path="res://assets/images/Collectibles/sign.png" id="7_dj4wq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vy120"]
 texture = ExtResource("2_dj4wq")
@@ -309,7 +308,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAVAAUAAAAAAAEAAAAVAAQAAAAAAAIAAAAVAAU
 tile_set = SubResource("TileSet_iwxjo")
 
 [node name="Player" parent="." instance=ExtResource("3_k0mew")]
-position = Vector2(-26, 239)
+position = Vector2(45, 239)
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -349,10 +348,5 @@ scale = Vector2(2.65312, 6.58476)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(-10.8304, 2.72201)
 shape = SubResource("RectangleShape2D_656tx")
-
-[node name="Sign" type="Sprite2D" parent="."]
-position = Vector2(1213.75, 499)
-scale = Vector2(0.201562, 0.2)
-texture = ExtResource("7_dj4wq")
 
 [connection signal="body_entered" from="Exit" to="Player" method="_on_exit_body_entered"]

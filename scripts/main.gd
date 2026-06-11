@@ -18,6 +18,7 @@ func _load_level(level_number: int, first_load: bool) -> void:
 		await _fade(1.0)
 	if current_level_root:
 		current_level_root.queue_free()
+	
 		
 	#change level
 	var level_path = "res://scenes/levels/level%s.tscn" % level_number
@@ -25,8 +26,9 @@ func _load_level(level_number: int, first_load: bool) -> void:
 	add_child(current_level_root)
 	current_level_root.name = "LevelRoot"
 	_setup_level(current_level_root)
-	
 	await _fade(0.0)
+	
+	
 		
 		
 func _setup_level(_level_root: Node) -> void:
